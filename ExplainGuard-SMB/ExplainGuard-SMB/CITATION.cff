@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or benchmark, please cite it as below."
+title: "ExplainGuard-SMB: An Explainable, Auditable, Graph-Aware Fraud-Screening Benchmark and Toolkit for Small Online Businesses"
+abstract: >-
+  ExplainGuard-SMB is an open benchmark and reference toolkit for real-time
+  payment-fraud screening in small U.S. online businesses. It evaluates
+  detectors jointly on detection under a fixed alert budget, false alarms at
+  equal recall, per-transaction latency, stability of plain-language
+  explanations across model re-estimation, and coverage of a tamper-evident
+  decision log aligned with the NIST AI Risk Management Framework.
+type: software
+authors:
+  - family-names: Rahman
+    given-names: Hasibur
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add your ORCID iD before release
+version: 0.1.0
+date-released: "2026-10-10"
+license: MIT
+# repository-code: "https://github.com/YOUR-GITHUB-USERNAME/ExplainGuard-SMB"   # set before release
+keywords:
+  - fraud detection
+  - explainable AI
+  - graph analytics
+  - anomaly detection
+  - audit log
+  - small business
+  - NIST AI RMF

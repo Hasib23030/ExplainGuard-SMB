@@ -1,0 +1,74 @@
+[
+  {
+    "scenario": "standard",
+    "seed": 7,
+    "rules_recall": 0.31511254019292606,
+    "hybrid_recall": 0.5080385852090032,
+    "logit_graph_recall": 0.5466237942122186,
+    "hybrid_precision": 1.0,
+    "fp_reduction": 0.6845637583892618,
+    "p99_ms": 15.866377119998553,
+    "stability": 0.9372367088607594,
+    "audit_ok": true
+  },
+  {
+    "scenario": "standard",
+    "seed": 11,
+    "rules_recall": 0.20253164556962025,
+    "hybrid_recall": 0.45569620253164556,
+    "logit_graph_recall": 0.4430379746835443,
+    "hybrid_precision": 1.0,
+    "fp_reduction": -1.5744680851063828,
+    "p99_ms": 14.953638479992152,
+    "stability": 0.8981638888888891,
+    "audit_ok": true
+  },
+  {
+    "scenario": "standard",
+    "seed": 23,
+    "rules_recall": 0.22705314009661837,
+    "hybrid_recall": 0.5990338164251208,
+    "logit_graph_recall": 0.5458937198067633,
+    "hybrid_precision": 0.8671328671328671,
+    "fp_reduction": 0.7463768115942029,
+    "p99_ms": 15.888683600110209,
+    "stability": 0.9440594405594405,
+    "audit_ok": true
+  },
+  {
+    "scenario": "novel_attack",
+    "seed": 7,
+    "rules_recall": 0.18659420289855072,
+    "hybrid_recall": 0.8478260869565217,
+    "logit_graph_recall": 0.338768115942029,
+    "hybrid_precision": 0.9267326732673268,
+    "fp_reduction": 0.9727891156462585,
+    "p99_ms": 15.501513240017172,
+    "stability": 0.9389487128712871,
+    "audit_ok": true
+  },
+  {
+    "scenario": "novel_attack",
+    "seed": 11,
+    "rules_recall": 0.10284463894967177,
+    "hybrid_recall": 0.7549234135667396,
+    "logit_graph_recall": 0.15973741794310722,
+    "hybrid_precision": 0.9007832898172323,
+    "fp_reduction": 0.8662420382165605,
+    "p99_ms": 15.208464679981264,
+    "stability": 0.9736728459530027,
+    "audit_ok": true
+  },
+  {
+    "scenario": "novel_attack",
+    "seed": 23,
+    "rules_recall": 0.09055118110236221,
+    "hybrid_recall": 0.8523622047244095,
+    "logit_graph_recall": 0.17913385826771652,
+    "hybrid_precision": 0.8712273641851107,
+    "fp_reduction": 0.8928571428571429,
+    "p99_ms": 15.565240799974163,
+    "stability": 0.9302476861167003,
+    "audit_ok": true
+  }
+]

@@ -1,0 +1,318 @@
+{
+  "explainguard_version": "0.1.0",
+  "scenario": "standard",
+  "environment": {
+    "python": "3.13.16",
+    "sklearn": "1.9.1",
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39"
+  },
+  "config": {
+    "seed": 11,
+    "days": 90,
+    "n_merchants": 40,
+    "n_customers": 3000,
+    "legit_txn_per_customer_per_day": 0.12,
+    "n_rings": 12,
+    "ring_cards": [
+      8,
+      25
+    ],
+    "ring_devices": [
+      2,
+      4
+    ],
+    "ring_ips": [
+      2,
+      5
+    ],
+    "n_card_testing_bursts": 25,
+    "card_testing_start_day": 0,
+    "n_takeovers": 150,
+    "chargeback_delay_days": [
+      5,
+      30
+    ]
+  },
+  "data": {
+    "transactions": 33286,
+    "fraud_rate": 0.029201466081836207,
+    "train": 19803,
+    "validation": 6770,
+    "test": 6713,
+    "test_fraud": 237,
+    "train_labels_matured": 362,
+    "train_fraud_true": 502
+  },
+  "operating_point_alert_budget": {
+    "max_validation_fpr": 0.01,
+    "results": {
+      "rules": {
+        "threshold": 2.0048618194999843,
+        "tp": 48,
+        "fp": 27,
+        "fn": 189,
+        "tn": 6449,
+        "recall": 0.20253164556962025,
+        "precision": 0.64,
+        "fpr": 0.004169240271772699,
+        "alerts": 75,
+        "pr_auc": 0.6102603192826536,
+        "roc_auc": 0.9651471971811532,
+        "recall_by_type": {
+          "card_testing": 0.0,
+          "ring": 0.32926829268292684,
+          "takeover": 0.4117647058823529
+        }
+      },
+      "isolation_forest": {
+        "threshold": 0.7337152942657427,
+        "tp": 121,
+        "fp": 4,
+        "fn": 116,
+        "tn": 6472,
+        "recall": 0.510548523206751,
+        "precision": 0.968,
+        "fpr": 0.0006176652254478073,
+        "alerts": 125,
+        "pr_auc": 0.7338598110808915,
+        "roc_auc": 0.9618318074135463,
+        "recall_by_type": {
+          "card_testing": 0.9038461538461539,
+          "ring": 0.32926829268292684,
+          "takeover": 0.0
+        }
+      },
+      "logit_transaction_only": {
+        "threshold": 5.6811542218571685,
+        "tp": 118,
+        "fp": 2,
+        "fn": 119,
+        "tn": 6474,
+        "recall": 0.4978902953586498,
+        "precision": 0.9833333333333333,
+        "fpr": 0.00030883261272390367,
+        "alerts": 120,
+        "pr_auc": 0.8558615645664573,
+        "roc_auc": 0.9897446723116577,
+        "recall_by_type": {
+          "card_testing": 0.9711538461538461,
+          "ring": 0.2073170731707317,
+          "takeover": 0.0
+        }
+      },
+      "logit_graph": {
+        "threshold": 6.251899449311617,
+        "tp": 105,
+        "fp": 0,
+        "fn": 132,
+        "tn": 6476,
+        "recall": 0.4430379746835443,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "alerts": 105,
+        "pr_auc": 0.8947698110867544,
+        "roc_auc": 0.9860940623346703,
+        "recall_by_type": {
+          "card_testing": 0.7692307692307693,
+          "ring": 0.3048780487804878,
+          "takeover": 0.0
+        }
+      },
+      "hybrid_graph_anomaly": {
+        "threshold": -0.2195559723980009,
+        "tp": 108,
+        "fp": 0,
+        "fn": 129,
+        "tn": 6476,
+        "recall": 0.45569620253164556,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "alerts": 108,
+        "pr_auc": 0.7362870510040576,
+        "roc_auc": 0.9617822899482151,
+        "recall_by_type": {
+          "card_testing": 0.8173076923076923,
+          "ring": 0.2804878048780488,
+          "takeover": 0.0
+        }
+      }
+    }
+  },
+  "operating_point_equal_recall": {
+    "rule_test_recall": 0.20253164556962025,
+    "results": {
+      "rules": {
+        "threshold": 2.0048696092197096,
+        "tp": 48,
+        "fp": 27,
+        "fn": 189,
+        "tn": 6449,
+        "recall": 0.20253164556962025,
+        "precision": 0.64,
+        "fpr": 0.004169240271772699,
+        "alerts": 75,
+        "fp_reduction_vs_rules": 0.0
+      },
+      "isolation_forest": {
+        "threshold": 0.7769380382063802,
+        "tp": 50,
+        "fp": 0,
+        "fn": 187,
+        "tn": 6476,
+        "recall": 0.2109704641350211,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "alerts": 50,
+        "fp_reduction_vs_rules": 1.0
+      },
+      "logit_transaction_only": {
+        "threshold": 9.39048670694002,
+        "tp": 48,
+        "fp": 0,
+        "fn": 189,
+        "tn": 6476,
+        "recall": 0.20253164556962025,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "alerts": 48,
+        "fp_reduction_vs_rules": 1.0
+      },
+      "logit_graph": {
+        "threshold": 12.817919036976651,
+        "tp": 48,
+        "fp": 0,
+        "fn": 189,
+        "tn": 6476,
+        "recall": 0.20253164556962025,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "alerts": 48,
+        "fp_reduction_vs_rules": 1.0
+      },
+      "hybrid_graph_anomaly": {
+        "threshold": 1.318511555940306,
+        "tp": 48,
+        "fp": 0,
+        "fn": 189,
+        "tn": 6476,
+        "recall": 0.20253164556962025,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "alerts": 48,
+        "fp_reduction_vs_rules": 1.0
+      }
+    },
+    "false_positives_at_recall": {
+      "0.3": {
+        "rules": 46,
+        "isolation_forest": 0,
+        "logit_transaction_only": 0,
+        "logit_graph": 0,
+        "hybrid_graph_anomaly": 0
+      },
+      "0.5": {
+        "rules": 47,
+        "isolation_forest": 3,
+        "logit_transaction_only": 2,
+        "logit_graph": 0,
+        "hybrid_graph_anomaly": 1
+      },
+      "0.7": {
+        "rules": 47,
+        "isolation_forest": 121,
+        "logit_transaction_only": 59,
+        "logit_graph": 2,
+        "hybrid_graph_anomaly": 121
+      }
+    }
+  },
+  "live_replay": {
+    "transactions_screened": 6713,
+    "alerts": 108,
+    "latency_ms_p50": 9.499914000116405,
+    "latency_ms_p95": 13.038829800052554,
+    "latency_ms_p99": 14.953638479992152,
+    "top3_stability_mean": 0.8981638888888891,
+    "share_alerts_reason_shown": 0.8333333333333334,
+    "audit_records": 6713,
+    "audit_chain_valid": true,
+    "audit_coverage": 1.0,
+    "audit_head": "30d7ba103c32000bba26d11ff77d272be9333822ac1fe25579d8f6b8a9983c4a",
+    "example_alerts": [
+      {
+        "txn_id": "T0026936",
+        "score": -0.110694,
+        "reason_text": "Flagged as unusual compared with normal customers because this device is linked to 2 card(s) that already had chargebacks; this network address is linked to 1 card(s) that already had chargebacks; it was placed between midnight and 6 in the morning.",
+        "stability": 1.0
+      },
+      {
+        "txn_id": "T0027288",
+        "score": -0.196505,
+        "reason_text": "Flagged as unusual compared with normal customers because this device has been used with 10 different cards; this network address is linked to 1 card(s) that already had chargebacks; this device is linked to 1 card(s) that already had chargebacks.",
+        "stability": 1.0
+      },
+      {
+        "txn_id": "T0027679",
+        "score": 1.0297,
+        "reason_text": "Flagged because this device has been used with 11 different cards; this network address has been used with 10 different cards; the amount ($136.16) is high for this store.",
+        "stability": 0.9167
+      },
+      {
+        "txn_id": "T0027688",
+        "score": 0.30467,
+        "reason_text": "Flagged because it is a very small charge, typical of stolen-card testing; this device made 4 purchases in the last hour; the card was used from a device it has never used before.",
+        "stability": 1.0
+      },
+      {
+        "txn_id": "T0027689",
+        "score": 0.185798,
+        "reason_text": "Flagged because this device made 5 purchases in the last hour; it is a very small charge, typical of stolen-card testing; the card was used from a device it has never used before.",
+        "stability": 0.9167
+      }
+    ]
+  },
+  "targets": {
+    "fp_reduction_vs_rules": {
+      "target": ">= 20% fewer false positives than rules at recall 0.7",
+      "observed": -1.5744680851063828,
+      "met": false
+    },
+    "latency_ms_p99": {
+      "target": "< 100 ms",
+      "observed": 14.953638479992152,
+      "met": true
+    },
+    "top3_stability_mean": {
+      "target": ">= 0.80",
+      "observed": 0.8981638888888891,
+      "met": true
+    },
+    "audit_coverage": {
+      "target": "100%",
+      "observed": 1.0,
+      "met": true
+    }
+  },
+  "supervised_arm_coefficients": {
+    "log_amount": 2.0979,
+    "amount_vs_card_median": -0.6036,
+    "is_night": 0.3818,
+    "card_txn_24h": 0.4594,
+    "card_new_device": 0.7858,
+    "card_new_ip": 0.306,
+    "small_amount": 0.9731,
+    "device_distinct_cards": 0.4347,
+    "ip_distinct_cards": 0.3917,
+    "device_txn_1h": 1.1229,
+    "device_small_txn_1h": -0.8321,
+    "device_chargeback_cards": -0.028,
+    "ip_chargeback_cards": 0.196,
+    "card_2hop_chargeback_cards": -0.2212,
+    "card_distinct_devices": -0.4816,
+    "merchant_chargeback_rate_30d": -0.7595
+  },
+  "alerts_by_arm": {
+    "supervised": 78,
+    "anomaly": 30
+  }
+}
